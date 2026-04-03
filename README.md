@@ -4,5 +4,5 @@
 
 *Accepted at 3DMV Workshop at CVPR 2026*
 
-The code and datasets for this paper are currently being prepared for release. 
+The code, model weights and utilizations instructions for LiveStre4m are currently being prepared for release. 
 Please check back soon!
