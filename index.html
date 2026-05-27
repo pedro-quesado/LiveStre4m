@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>LiveStre4m: Feed-Forward Live Streaming of Novel Views from Unposed Multi-View Video</title>
   <link rel="stylesheet" href="style.css?v=5">
+  <style>
+    /* Basic table styling to match the clean aesthetic */
+    .results-table-container { overflow-x: auto; margin-bottom: 24px; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.92rem; margin-top: 12px; }
+    th, td { padding: 10px 14px; border-bottom: 1px solid #eee; text-align: left; }
+    th { font-weight: 600; color: #1f2937; background-color: #fafafa; }
+    tbody tr:hover { background-color: #f9f9f9; }
+    h3 { font-size: 1.15rem; margin: 24px 0 8px; }
+  </style>
 </head>
 
 <body>
@@ -37,20 +46,13 @@
           <span class="pill-text">arXiv</span>
         </a>
 
-        <a class="pill pill-dark" href="#" target="_blank" rel="noopener">
+        <a class="pill pill-dark" href="https://github.com/pedro-quesado/LiveStre4m" target="_blank" rel="noopener">
           <span class="pill-icon" aria-hidden="true">
             <svg viewBox="0 0 16 16" width="18" height="18" role="img" focusable="false" aria-label="GitHub">
               <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8Z"></path>
             </svg>
           </span>
           <span class="pill-text">Code</span>
-        </a>
-
-        <a class="pill pill-dark" href="#" target="_blank" rel="noopener">
-          <span class="pill-icon" aria-hidden="true">
-            <span class="hf-emoji">🤗</span>
-          </span>
-          <span class="pill-text">Dataset</span>
         </a>
       </nav>
     </header>
@@ -77,25 +79,171 @@
         <div class="figure-pair">
           <img class="figure-sm" src="assets/results.png" alt="Qualitative results">
           <p class="caption">
-            Figure 4. Qualitative results produced by LiveStre4m on dynamic scenes.
+            Figure 2. Qualitative results produced by LiveStre4m on dynamic scenes.
           </p>
         </div>
+      </div>
+
+      <h3>Dynamic Scene Reconstruction</h3>
+      <p>Quantitative comparison against optimization methods on the Neural3DVideo dataset on a single A100 GPU.</p>
+      <div class="results-table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Method</th>
+              <th>Runtime (s) ↓</th>
+              <th>PSNR ↑</th>
+              <th>Camera Free</th>
+              <th>#Views</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Video Optimization</strong></td>
+              <td>K-planes</td>
+              <td>48.00</td>
+              <td>32.17</td>
+              <td>❌</td>
+              <td>&gt;19</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>4DGS</td>
+              <td>7.80</td>
+              <td>32.70</td>
+              <td>❌</td>
+              <td>≥19</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Spacetime-GS</td>
+              <td>48.00</td>
+              <td>33.71</td>
+              <td>❌</td>
+              <td>≥19</td>
+            </tr>
+            <tr>
+              <td><strong>Frame Optimization</strong></td>
+              <td>StreamRF</td>
+              <td>15.00</td>
+              <td>32.09</td>
+              <td>❌</td>
+              <td>&gt;19</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>3DGStream</td>
+              <td>16.93</td>
+              <td>32.75</td>
+              <td>❌</td>
+              <td>≥19</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>IGS</td>
+              <td>2.67</td>
+              <td>33.89</td>
+              <td>❌</td>
+              <td>≥19</td>
+            </tr>
+            <tr>
+              <td><strong>Feed-forward</strong></td>
+              <td><strong>LiveStre4m (Ours)</strong></td>
+              <td><strong>0.14</strong></td>
+              <td>20.64</td>
+              <td>✅</td>
+              <td><strong>2</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="caption" style="text-align: left;"><em>(Note: MeetRoom results follow a similar trend, where LiveStre4m operates in 0.10s using only 2 views.)</em></p>
+
+      <h3>Feed-Forward Scene Reconstruction</h3>
+      <p>Comparison of feed-forward, camera-free scene reconstruction methods on a single H100 GPU.</p>
+      <div class="results-table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Dataset</th>
+              <th>Method</th>
+              <th>Runtime (s) ↓</th>
+              <th>PSNR ↑</th>
+              <th>Resolution</th>
+              <th>Pose Free</th>
+              <th>#Views</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Neural3DVideo</strong></td>
+              <td>FLARE</td>
+              <td>0.249</td>
+              <td>21.45</td>
+              <td>512x384</td>
+              <td>✅</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><strong>LiveStre4m (Ours)</strong></td>
+              <td><strong>0.062</strong></td>
+              <td><strong>22.44</strong></td>
+              <td>512x384</td>
+              <td>✅</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><strong>LiveStre4m (Ours)</strong></td>
+              <td>0.074</td>
+              <td>21.11</td>
+              <td><strong>1024x768</strong></td>
+              <td>✅</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td><strong>MeetRoom</strong></td>
+              <td>FLARE</td>
+              <td>0.243</td>
+              <td>16.65</td>
+              <td>512x384</td>
+              <td>✅</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><strong>LiveStre4m (Ours)</strong></td>
+              <td><strong>0.062</strong></td>
+              <td><strong>19.32</strong></td>
+              <td>512x384</td>
+              <td>✅</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><strong>LiveStre4m (Ours)</strong></td>
+              <td>0.074</td>
+              <td>18.65</td>
+              <td><strong>1024x768</strong></td>
+              <td>✅</td>
+              <td>2</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
     <section>
       <h2>Citation</h2>
-      <pre class="bibtex">@article{akdag2026livestre4m,
-  title={LiveStre4m: Feed-Forward Live Streaming of Novel Views from Unposed Multi-View Video},
-  author={Akdag, Erkut and Kashefbahrami, Yasaman and Quesado, Pedro and Menu, Willem and Bondarev, Egor},
-  journal={arXiv preprint arXiv:2604.06740},
-  year={2026}
+      <pre class="bibtex">@misc{quesado2026livestre4mfeedforwardlivestreaming,
+      title={LiveStre4m: Feed-Forward Live Streaming of Novel Views from Unposed Multi-View Video}, 
+      author={Pedro Quesado and Erkut Akdag and Yasaman Kashefbahrami and Willem Menu and Egor Bondarev},
+      year={2026},
+      eprint={2604.06740},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2604.06740}, 
 }</pre>
-    </section>
-
-    <footer class="footer">
-      <p>© 2026 • Project page for LiveStre4m</p>
-    </footer>
-  </div>
-</body>
-</html>
+    </section
