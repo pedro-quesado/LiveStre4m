@@ -57,3 +57,23 @@ Comparison of feed-forward, camera-free scene reconstruction methods on a single
 | **MeetRoom** | FLARE | 0.243 | 16.65 | 512x384 | ✅ | 2 |
 | | **LiveStre4m (Ours)** | **0.062** | **19.32** | 512x384 | ✅ | 2 |
 | | **LiveStre4m (Ours)** | 0.074 | 18.65 | **1024x768** | ✅ | 2 |
+
+## Acknowledgement
+
+We adapted some code from some awesome repositories including [FLARE](https://github.com/ant-research/FLARE) and [EDEN](https://github.com/bbldcver/EDEN). Thanks for making the code bases publicly available.
+
+## Citation
+
+If you find this repository useful, please consider citing:
+
+```bibtex
+@misc{quesado2026livestre4mfeedforwardlivestreaming,
+      title={LiveStre4m: Feed-Forward Live Streaming of Novel Views from Unposed Multi-View Video}, 
+      author={Pedro Quesado and Erkut Akdag and Yasaman Kashefbahrami and Willem Menu and Egor Bondarev},
+      year={2026},
+      eprint={2604.06740},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2604.06740}, 
+}
+```
