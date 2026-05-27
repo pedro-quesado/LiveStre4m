@@ -5,7 +5,7 @@
   <div align="center"></div>
 </p>
 
-<p align="center"> <img src="assets/figure1.png" width="95%"> </p>
+<p align="center"> <img src="assets/full_architecture_14_11_25" width="95%"> </p>
 <p align="left"><i>Figure 1. Illustration of the proposed LiveStre4m method, a feed-forward model for live-streaming novel viewpoint video from two or more low-resolution input streams.</i></p>
 
 ## Introduction
