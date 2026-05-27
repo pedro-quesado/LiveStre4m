@@ -5,14 +5,14 @@
   <div align="center"></div>
 </p>
 
-<p align="center"> <img src="assets/full_architecture_14_11_25" width="95%"> </p>
+<p align="center"> <img src="assets/intro.png" width="95%"> </p>
 <p align="left"><i>Figure 1. Illustration of the proposed LiveStre4m method, a feed-forward model for live-streaming novel viewpoint video from two or more low-resolution input streams.</i></p>
 
 ## Introduction
 
 LiveStre4m is a feed-forward model for real-time novel view synthesis (NVS) that enables live streaming from as few as two unposed, multi-view inputs by predicting camera parameters directly from RGB video streams. By combining a multi-view vision transformer for 3D scene reconstruction with a diffusion-transformer interpolation module, the system achieves an average reconstruction time of 0.07s per frame at 1024x768 resolution, outperforming optimization-based dynamic scene representation methods in runtime.
 
-<p align="center"> <img src="assets/figure4.png" width="85%"> </p>
+<p align="center"> <img src="assets/results" width="85%"> </p>
 <p align="left"><i>Figure 2. Qualitative results produced by LiveStre4m, synthesizing the target viewpoint using only two neighboring input views, without requiring optimization or ground-truth camera parameters.</i></p>
 
 ## Environment Setup
