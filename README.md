@@ -19,14 +19,15 @@ LiveStre4m is a feed-forward model for real-time novel view synthesis (NVS) that
 
 # Create environment
 conda env create -f environment.yml
+
 conda activate livestre4m
 
 ## Data Preparation
 
-*(Placeholder: Add instructions for downloading and organizing your training and evaluation datasets, such as Neural3DVideo and MeetRoom.)*
+*(Placeholder)*
 
 ## Usage - Inference
-*(Placeholder: )*
+*(Placeholder)*
 
 ## Results
 
