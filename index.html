@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LiveStre4m: Feed-Forward Live Streaming of Novel Views from Unposed Multi-View Video</title>
+  <link rel="stylesheet" href="style.css?v=5">
+</head>
+
+<body>
+  <div class="container">
+    <header class="hero">
+      <h1>LiveStre4m: Feed-Forward Live Streaming of Novel Views from Unposed Multi-View Video</h1>
+
+      <p class="venue">3DMV@CVPRW 2026</p>
+
+      <p class="authors">
+        <a class="author-link" href="https://research.tue.nl/en/persons/erkut-akdag/" target="_blank" rel="noopener">Erkut Akdag</a><sup>1</sup><span class="comma">,</span>
+        <a class="author-link" href="https://research.tue.nl/en/persons/yasaman-kashefbahrami/" target="_blank" rel="noopener">Yasaman Kashefbahrami</a><sup>1</sup><span class="comma">,</span>
+        <a class="author-link" href="#" target="_blank" rel="noopener">Pedro Quesado</a><sup>1</sup><span class="comma">,</span>
+        <a class="author-link" href="#" target="_blank" rel="noopener">Willem Menu</a><sup>1</sup><span class="comma">,</span>
+        <a class="author-link" href="https://www.tue.nl/en/research/researchers/egor-bondarau" target="_blank" rel="noopener">Egor Bondarev</a><sup>1</sup>
+      </p>
+
+      <p class="affiliations">
+        <span class="dept"><sup>1</sup>AIMSGroup, Department of Electrical Engineering, Eindhoven University of Technology</span>
+      </p>
+
+      <nav class="linkrow" aria-label="Project links">
+        <a class="pill pill-dark" href="https://arxiv.org/abs/2604.06740" target="_blank" rel="noopener">
+          <span class="pill-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" role="img" focusable="false" aria-label="Paper">
+              <path d="M6 2h9l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm8 1.5V8h4.5" />
+              <path d="M8 12h8M8 16h8M8 20h6" />
+            </svg>
+          </span>
+          <span class="pill-text">arXiv</span>
+        </a>
+
+        <a class="pill pill-dark" href="#" target="_blank" rel="noopener">
+          <span class="pill-icon" aria-hidden="true">
+            <svg viewBox="0 0 16 16" width="18" height="18" role="img" focusable="false" aria-label="GitHub">
+              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8Z"></path>
+            </svg>
+          </span>
+          <span class="pill-text">Code</span>
+        </a>
+
+        <a class="pill pill-dark" href="#" target="_blank" rel="noopener">
+          <span class="pill-icon" aria-hidden="true">
+            <span class="hf-emoji">🤗</span>
+          </span>
+          <span class="pill-text">Dataset</span>
+        </a>
+      </nav>
+    </header>
+
+    <section>
+      <h2>Overview</h2>
+      <p>
+      LiveStre4m is a feed-forward model for real-time novel view synthesis (NVS) that enables temporally consistent live streaming from as few as two unposed, sparse multi-view inputs by predicting camera parameters directly from RGB images. By combining a multi-view vision transformer for 3D scene reconstruction with a diffusion-transformer interpolation module, the system achieves an average reconstruction time of 0.07s per frame at 1024x768 resolution, vastly outperforming optimization-based dynamic scene representation methods in runtime.
+      </p>
+
+      <img class="figure" src="assets/figure1.png" alt="Method overview">
+      <p class="caption">
+        Figure 1. Illustration of the proposed LiveStre4m method, a feed-forward model for live-streaming novel viewpoint video from two or more low-resolution input streams.
+      </p>
+    </section>
+
+    <section>
+      <h2>Results</h2>
+      <p>
+        LiveStre4m prioritizes efficiency, synthesizing the target viewpoint using only two neighboring input views, without requiring optimization or ground-truth camera parameters. It demonstrates a remarkable improvement in efficiency, operating in 0.14 seconds per frame on complex dynamic scenes, approximately 55x faster than 4DGS and 19x faster than IGS.
+      </p>
+
+      <div class="figure-row">
+        <div class="figure-pair">
+          <img class="figure-sm" src="assets/figure4.png" alt="Qualitative results">
+          <p class="caption">
+            Figure 4. Qualitative results produced by LiveStre4m on dynamic scenes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Citation</h2>
+      <pre class="bibtex">@article{akdag2026livestre4m,
+  title={LiveStre4m: Feed-Forward Live Streaming of Novel Views from Unposed Multi-View Video},
+  author={Akdag, Erkut and Kashefbahrami, Yasaman and Quesado, Pedro and Menu, Willem and Bondarev, Egor},
+  journal={arXiv preprint arXiv:2604.06740},
+  year={2026}
+}</pre>
+    </section>
+
+    <footer class="footer">
+      <p>© 2026 • Project page for LiveStre4m</p>
+    </footer>
+  </div>
+</body>
+</html>
