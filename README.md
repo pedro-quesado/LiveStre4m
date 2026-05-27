@@ -24,10 +24,10 @@ conda activate livestre4m
 
 ## Data Preparation
 
-*(Placeholder)*
+🚧 **Under Construction:** This section will be updated soon! 🛠️
 
 ## Usage - Inference
-*(Placeholder)*
+🚧 **Under Construction:** This section will be updated soon! 🛠️
 
 ## Results
 
