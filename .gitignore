@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Data & Models
+checkpoints/
+*.pth
+*.pt
+FRAMES/
+*.mp4
+*.avi
+
+# Environment
+.env
+.venv
+env/
+venv/
+
+# OS generated files
+.DS_Store
+Thumbs.db
