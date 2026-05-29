@@ -57,11 +57,15 @@ This will extract and automatically organize the frames into the required direct
 
 ## 📦 Model Weights
 
-Download the pre-trained LiveStre4m checkpoint from [Hugging Face](YOUR_LINK_HERE) and place it in the `checkpoints/` directory.
+Download the pre-trained LiveStre4m checkpoint (5GB) and place it in the `checkpoints/` directory before running inference.
+
+[📥 Download LiveStre4m.pth](https://huggingface.co/Pedro-Quesado/LiveStre4m/resolve/main/checkpoints/LiveStre4m.pth?download=true)
+
+Alternatively, you can download it directly via the command line:
 
 ```bash
 mkdir -p checkpoints
-wget -O checkpoints/LiveStre4m.pth "DOWNLOAD_LINK"
+wget -O checkpoints/LiveStre4m.pth "[https://huggingface.co/Pedro-Quesado/LiveStre4m/resolve/main/checkpoints/LiveStre4m.pth?download=true](https://huggingface.co/Pedro-Quesado/LiveStre4m/resolve/main/checkpoints/LiveStre4m.pth?download=true)"
 ```
 
 ## 🚀 Inference
