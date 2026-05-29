@@ -30,7 +30,7 @@ conda activate LiveStre4m
 
 ## Data Preparation
 
-LiveStre4m infers camera geometry on the fly, meaning **no COLMAP data or pre-computed camera poses are required**—only time-synchronized video frames.
+LiveStre4m infers camera geometry on the fly, meaning **no COLMAP data or pre-computed camera poses are required** only time-synchronized video frames.
 
 To evaluate on benchmarks like **Neural3DVideo (N3DV)** or **MeetRoom**, please refer to their original repositories to obtain the raw multi-view video datasets. Once you have the raw videos inside a scene folder, run our fast extraction script:
 
@@ -103,7 +103,7 @@ Comparison of feed-forward, camera-free scene reconstruction methods on a single
 
 ## Acknowledgement
 
-We adapted some code from some awesome repositories including [FLARE](https://github.com/ant-research/FLARE) and [EDEN](https://github.com/bbldcver/EDEN). Thanks for making the code bases publicly available.
+We adapted some code from some awesome repositories including [FLARE](https://github.com/ant-research/FLARE), [EDEN](https://github.com/bbldcver/EDEN), [Dust3R](https://github.com/naver/dust3r), and [MASt3R](https://github.com/naver/mast3r). Thanks for making the code bases publicly available.
 
 ## Citation
 
