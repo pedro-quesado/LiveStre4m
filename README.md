@@ -64,8 +64,11 @@ Download the pre-trained LiveStre4m checkpoint (5GB) and place it in the `checkp
 Alternatively, you can download it directly via the command line:
 
 ```bash
-mkdir -p checkpoints
-wget -O checkpoints/LiveStre4m.pth "[https://huggingface.co/Pedro-Quesado/LiveStre4m/resolve/main/checkpoints/LiveStre4m.pth?download=true](https://huggingface.co/Pedro-Quesado/LiveStre4m/resolve/main/checkpoints/LiveStre4m.pth?download=true)"
+# Install the Hugging Face CLI
+pip install -U "huggingface_hub[cli]"
+
+# Download the model directly into the checkpoints/ folder
+huggingface-cli download Pedro-Quesado/LiveStre4m checkpoints/LiveStre4m.pth --local-dir .
 ```
 
 ## 🚀 Inference
