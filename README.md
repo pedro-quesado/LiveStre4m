@@ -55,6 +55,15 @@ This will extract and automatically organize the frames into the required direct
 
 ---
 
+## 📦 Model Weights
+
+Download the pre-trained LiveStre4m checkpoint from [Hugging Face](YOUR_LINK_HERE) and place it in the `checkpoints/` directory.
+
+```bash
+mkdir -p checkpoints
+wget -O checkpoints/LiveStre4m.pth "DOWNLOAD_LINK"
+```
+
 ## 🚀 Inference
 
 Run the novel view synthesis pipeline using the following command:
