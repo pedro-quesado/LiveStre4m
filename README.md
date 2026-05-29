@@ -59,14 +59,8 @@ This will extract and automatically organize the frames into the required direct
 
 Download the pre-trained LiveStre4m checkpoint (5GB) and place it in the `checkpoints/` directory before running inference.
 
-[📥 Download LiveStre4m.pth](https://huggingface.co/Pedro-Quesado/LiveStre4m/resolve/main/checkpoints/LiveStre4m.pth?download=true)
+[📥 Download LiveStre4m.pth](https://huggingface.co/Pedro-Quesado/LiveStre4m/tree/main/checkpoints)
 
-Alternatively, you can download it directly via the command line:
-
-```bash
-mkdir -p checkpoints
-wget -O checkpoints/LiveStre4m.pth "[https://huggingface.co/Pedro-Quesado/LiveStre4m/resolve/main/checkpoints/LiveStre4m.pth?download=true](https://huggingface.co/Pedro-Quesado/LiveStre4m/resolve/main/checkpoints/LiveStre4m.pth?download=true)"
-```
 
 ## 🚀 Inference
 
