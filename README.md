@@ -126,13 +126,12 @@ We adapted some code from some awesome repositories including [FLARE](https://gi
 If you find this repository useful, please consider citing:
 
 ```bibtex
-@misc{quesado2026livestre4mfeedforwardlivestreaming,
-      title={LiveStre4m: Feed-Forward Live Streaming of Novel Views from Unposed Multi-View Video}, 
-      author={Pedro Quesado and Erkut Akdag and Yasaman Kashefbahrami and Willem Menu and Egor Bondarev},
-      year={2026},
-      eprint={2604.06740},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={[https://arxiv.org/abs/2604.06740](https://arxiv.org/abs/2604.06740)}, 
+@InProceedings{Quesado_2026_CVPR,
+    author    = {Quesado, Pedro and Akdag, Erkut and Kashefbahrami, Yasaman and Menu, Willem and Bondarev, Egor},
+    title     = {LiveStre4m: Feed-Forward Live Streaming of Novel Views from Unposed Multi-View Video},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
+    month     = {June},
+    year      = {2026},
+    pages     = {279-288}
 }
 ```
