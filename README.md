@@ -1,7 +1,7 @@
 <p align="center">
   <h1 align="center">LiveStre4m: Feed-Forward Live Streaming of Novel Views from Unposed Multi-View Video</h1>
   <p align="center"> <strong>3DMV@CVPRW 2026</strong></p>
-  <h3 align="center"><a href="https://arxiv.org/abs/2604.06740">Paper</a> | <a href="https://pedro-quesado.github.io/LiveStre4m/">Project Page</a></h3>
+  <h3 align="center"><a href="https://openaccess.thecvf.com/content/CVPR2026W/3DMV/papers/Quesado_LiveStre4m_Feed-Forward_Live_Streaming_of_Novel_Views_from_Unposed_Multi-View_CVPRW_2026_paper.pdf">Paper</a> | <a href="https://pedro-quesado.github.io/LiveStre4m/">Project Page</a></h3>
 </p>
 
 <p align="center"> <img src="assets/intro.png" width="95%"> </p>
